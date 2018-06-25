@@ -1,5 +1,5 @@
 import Immutable from 'immutable';
-import { LOAD_PRODUCTS } from '../actions/products';
+import { LOAD_DATA } from '../actions/products';
 
 const initialState = Immutable.fromJS({ data: [] });
 
@@ -11,7 +11,7 @@ const initialState = Immutable.fromJS({ data: [] });
  */
 const products = (state = initialState, action) => {
     switch (action.type) {
-        case LOAD_PRODUCTS:
+        case LOAD_DATA:
             if (!action.error) {
                 return state.set('data', Immutable.fromJS(action.payload));
             }

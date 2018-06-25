@@ -1,4 +1,4 @@
-export const LOAD_PRODUCTS = 'LOAD_PRODUCTS';
+export const LOAD_DATA = 'LOAD_DATA';
 
 /**
  * storeProducts action for load product data
@@ -8,7 +8,7 @@ export const LOAD_PRODUCTS = 'LOAD_PRODUCTS';
  */
 function storeProducts (err, products) {
     return {
-        type: LOAD_PRODUCTS,
+        type: LOAD_DATA,
         payload: err || products,
         error: !!err
     };
@@ -18,9 +18,9 @@ function storeProducts (err, products) {
  * loadProducts Load Product Data JSON
  * @return {Promise} Promise chain of fetch then dispatch
  */
-export function loadProducts () {
+export function loadData () {
     return (dispatch) => {
-        return fetch('./data/product_data.json')
+        return fetch('./data/bookings_data.json')
             .then(response => response.json())
             .then((json) => {
                 const products = json;

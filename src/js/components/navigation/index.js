@@ -11,6 +11,9 @@ const Navigation = (props) => (
     <nav className="jd-navigation-wrapper">
         <ul className="jd-navigation">
             <li className="jd-nav-item"><a to="/" className="icon icon-home" onClick={props.navigateTo.bind(this, '/')}><span>Home</span></a></li>
+            <li className="jd-nav-item"><a to="/book" className="icon icon-book" onClick={props.navigateTo.bind(this, '/book')}><span>Book Room</span></a></li>
+            <li className="jd-nav-item"><a to="/view" className="icon icon-view" onClick={props.navigateTo.bind(this, '/view')}><span>View Bookings</span></a></li>
+            
             <li className="jd-nav-item"><a to="/post" className="icon icon-heart" onClick={props.navigateTo.bind(this, '/post')}><span>Likes</span></a></li>
             <li className="jd-nav-item"><a to="/products" className="icon icon-camera" onClick={props.navigateTo.bind(this, '/products')}><span>Photos</span></a></li>
             <li className="jd-nav-item"><a to="/account" className="icon icon-user" onClick={props.navigateTo.bind(this, '/account')}><span>My Profile</span></a></li>

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'preact-compat';
 import { connect } from 'preact-redux';
-import { loadProducts } from '../../actions/products';
+import { loadData } from '../../actions/products';
 import Post from './post';
 
 /**
@@ -19,7 +19,7 @@ class Posts extends Component {
     };
 
     componentDidMount() {
-        this.props.dispatch(loadProducts());
+        this.props.dispatch(loadData());
     }
 
     /**
